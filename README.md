@@ -2,6 +2,11 @@
 
 A multi-layered anti-bot login system that detects and blocks automated traffic before credential validation. Built with Flask and vanilla JavaScript.
 
+![Login Page](docs/login.png)
+
+![Success Page](docs/success.png)
+
+
 ## What It Does
 
 This system uses five detection layers to identify bots attempting to brute force or credential stuff your login:
@@ -30,7 +35,7 @@ python -c "import secrets; print(secrets.token_hex(32))"
 python run.py
 ```
 
-Visit http://localhost:5000 and login with `demo` / `password`.
+Visit http://localhost:5001 and login with `demo` / `password`.
 
 ## Project Structure
 
