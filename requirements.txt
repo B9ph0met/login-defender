@@ -1,0 +1,15 @@
+# SentinelAuth Requirements
+# Flask web framework
+Flask==3.0.0
+
+# HTTP requests library for IP reputation API
+requests==2.31.0
+
+# Python dotenv for environment variable management
+python-dotenv==1.0.0
+
+# Optional: Production WSGI server
+gunicorn==21.2.0
+
+# Optional: Password hashing (for production use)
+bcrypt==4.1.2
