@@ -68,14 +68,14 @@ The server (`anti_bot_logic.py`) analyzes all five layers, calculates a total bo
 ```python
 from selenium import webdriver
 driver = webdriver.Chrome()
-driver.get('http://localhost:5000')
+driver.get('http://localhost:5001')
 # navigator.webdriver flag triggers +100 points
 ```
 
 **Rate limiting (should block after 5 attempts):**
 ```bash
 for i in {1..6}; do
-  curl -X POST http://localhost:5000/login \
+  curl -X POST http://localhost:5001/login \
     -d "username=demo&password=wrong"
 done
 ```
@@ -110,12 +110,12 @@ This is a demonstration project. For production use:
 
 **View statistics:**
 ```bash
-curl http://localhost:5000/stats
+curl http://localhost:5001/stats
 ```
 
 **Test bot scoring:**
 ```bash
-curl -X POST http://localhost:5000/debug/analysis \
+curl -X POST http://localhost:5001/debug/analysis \
   -d "username=test" \
   -d "sentinel_timing=0" \
   -d "sentinel_headless=100"
